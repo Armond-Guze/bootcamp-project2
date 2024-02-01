@@ -17,8 +17,15 @@ header, .project:not(:last-child) {
   text-decoration: underline;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+.background {
+  background-color: silver;
+}
+
+.top-bar {
+  background-color: cyan;
+}
+
+.login {
+  color: black;
+  padding: 10px;
 }
