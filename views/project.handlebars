@@ -1,14 +1,26 @@
-<div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{{get_emoji}}}</p>
-  <p>{{description}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p>
-  <p>
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p>
+<div class="container">
+	<div class="row">
+        <div class="col-md-10 mx-auto text-left mt-5">
+            <div class="card text-dark shadow">
+                <div class="card-header">
+                    {{#if post.myBlog}}
+                    <div class="row">
+                        <h1 class="col-11 mx-auto">{{ post.title }}</h1>
+                        <div class="col-1 d-flex justify-content-end">
+                                    <button class="dropdown-item mx-auto del-post-btn" type="button" data-id={{post.id}} data-user={{post.user.id}}>Delete this post</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{else}}
+                    <h1>{{ post.title }}</h1>
+                    <p><a href="/u/{{post.user.username}}">{{ post.user.username }}</a>{{ format_date post.createdAt }}</p>
+                </div>
+                <div class="card-body">
+                    <p>{{ post.post_body }}</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

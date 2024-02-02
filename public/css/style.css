@@ -1,5 +1,5 @@
 header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+  border: 2px solid cyan;
 }
 
 .no-button {
@@ -17,6 +17,9 @@ header, .project:not(:last-child) {
   text-decoration: underline;
 }
 
+
+/* All Pages */
+
 .background {
   background-color: silver;
 }
@@ -24,8 +27,18 @@ header, .project:not(:last-child) {
 .top-bar {
   background-color: cyan;
 }
-
 .login {
   color: black;
   padding: 10px;
+}
+/* Login Page */
+.form {
+  color: black;
+}
+
+/* Blog Page */
+.card {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
