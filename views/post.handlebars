@@ -2,7 +2,47 @@
   <h2>{{name}}</h2>
   <p>{{description}}</p>
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <button class="btn btn-primary">Comment on this Post!</button>
-  </p>
+ 
 </div>
+
+<!-- Comment form -->
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-10 mx-auto">
+      <div class="card text-dark shadow">
+        <div class="card-header">
+          <h3>Leave a Comment</h3>
+        </div>
+        <div class="card-body">
+          <form id="commentForm" data-id="{{id}}">
+            <div class="form-group">
+              <label for="body">Your Comment:</label>
+              <textarea class="form-control" id="body" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" >Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Display comments section -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 mx-auto text-left mt-5">
+      <div class="card text-dark shadow">
+        <div class="card-header">
+          <h3>Comments</h3>
+        </div>
+        <div class="card-body">
+          {{#each comments}}
+            {{> commentCard}} <!-- Assuming you have a partial named commentCard for individual comments -->
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/comment.js"></script>
