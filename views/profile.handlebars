@@ -3,6 +3,119 @@
     <h2>Welcome, {{name}}!</h2>
   </div>
 </div>
+<!--Profile Section-->
+<div class = "container" id = "profile-info">
+<div class = "row">
+  <!--About me box -->
+<div class = "col-3">
+  <h3>About me</h3>
+  <input style = "width:500px;height:200px" type = "text" id = "aboutme" placeholder = "Tell us about you">
+</div>
+  <!--Interests -->
+  
+<div class = "col-3">
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Select Interests
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <!-- Section for Movies -->
+        <div class="dropdown-header">Movie Genres</div>
+        <a class="dropdown-item" href="#">
+            <input type="checkbox" id="opt1" class="form-check-input"> Action
+        </a>
+        <a class="dropdown-item" href="#">
+            <input type="checkbox" id="opt2" class="form-check-input"> Thriller
+        </a>
+        <a class="dropdown-item" href="#">
+            <input type="checkbox" id="opt3" class="form-check-input"> Comedy
+        </a>
+        <a class="dropdown-item" href="#">
+            <input type="checkbox" id="opt4" class="form-check-input"> Horror
+        </a>
+        <!-- Section for Outdoor -->
+        <div class="dropdown-header">Outdoor Activities</div>
+        <a class="dropdown-item" href="#">
+            <input type="checkbox" id="opt5" class="form-check-input"> Hiking
+        </a>
+        <a class="dropdown-item" href="#">
+            <input type="checkbox" id="opt6" class="form-check-input"> Canoeing
+        </a>
+        <a class="dropdown-item" href="#">
+            <input type="checkbox" id="opt7" class="form-check-input"> Fishing
+        </a>
+        <a class="dropdown-item" href="#">
+            <input type="checkbox" id="opt8" class="form-check-input"> Hunting
+        </a>
+        <!-- Section for Book Genres -->
+        <div class="dropdown-header">Book Genres</div>
+        <a class="dropdown-item" href="#">
+            <input type="checkbox" id="opt9" class="form-check-input"> Mystery
+        </a>
+        <a class="dropdown-item" href="#">
+            <input type="checkbox" id="opt10" class="form-check-input"> Realistic Fiction
+        </a>
+        <a class="dropdown-item" href="#">
+            <input type="checkbox" id="opt11" class="form-check-input"> Romance
+        </a>
+        <a class="dropdown-item" href="#">
+            <input type="checkbox" id="opt12" class="form-check-input"> Science Fiction
+        </a>
+        <!-- Section for Hobbies -->
+        <div class="dropdown-header">Hobbies</div>
+        <a class="dropdown-item" href="#">
+            <input type="checkbox" id="opt13" class="form-check-input"> Knitting
+        </a>
+        <a class="dropdown-item" href="#">
+            <input type="checkbox" id="opt14" class="form-check-input"> Board Games
+        </a>
+        <a class="dropdown-item" href="#">
+            <input type="checkbox" id="opt15" class="form-check-input"> Video Games
+        </a>
+        <a class="dropdown-item" href="#">
+            <input type="checkbox" id="opt16" class="form-check-input"> Drawing
+        </a>
+    </div>
+</div>
+
+<div class = "col-2">
+ <input type = "text" placeholder = "please enter your age "/>
+ </div>
+ <div class = "col-2">
+ <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Select Gender
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+      <a class="dropdown-item" href="#">
+            <input type="radio" id="gen1" class="form-check-input"> Man
+        </a>
+         <a class="dropdown-item" href="#">
+            <input type="radio" id="gen2" class="form-check-input"> Woman
+        </a>
+         <a class="dropdown-item" href="#">
+            <input type="radio" id="gen3" class="form-check-input"> Non-Binary
+        </a>
+    </div>
+    </div>
+    <div class = "col-2">
+    <input  style = "width:200px;height:80px" type = "text" placeholder = "please enter city "/>
+    </div>
+  </div>
+<button type = "button" class = "btn btn-primary">Submit</button>
+
+</div>
+
 
 <div class="row mt-4">
   <div class="col-md-6">
@@ -22,7 +135,7 @@
       </div>
     </form>
   </div>
-
+<!--Taking every post and for each post its formatting it and putting on the page-->
   {{#if posts.length}}
   <div class="col-md-6 post-list">
     <h3>Current Post:</h3>
