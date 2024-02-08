@@ -16,12 +16,12 @@
           <h3>Leave a Comment</h3>
         </div>
         <div class="card-body">
-          <form id="commentForm">
+          <form id="commentForm" data-id="{{id}}">
             <div class="form-group">
               <label for="commentBody">Your Comment:</label>
               <textarea class="form-control" id="commentBody" rows="3" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" >Submit</button>
           </form>
         </div>
       </div>
@@ -46,3 +46,5 @@
     </div>
   </div>
 </div>
+
+<script src="/js/comment.js"></script>

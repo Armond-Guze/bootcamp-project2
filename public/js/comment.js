@@ -1,29 +1,31 @@
-$(document).ready(function() {
-    // Event listener for the submit button click event
-    $("#submit").on("click", async function(event) {
-        event.preventDefault();
-        
-        // Collect comment data from input fields
-        var commentText = $("#commentBody").val();
-        
-        // Construct the comment object
-        var newComment = {
-            
-            comment_body: commentText,
-        };
-        const response = await fetch('/api/comment', {
-                method: 'POST',
-                body: JSON.stringify(newComment),
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-                   
-        }) 
-        if (response.ok) {
-            document.location.reload();
-          } else {
-            alert('Failed to create post');
-          }
-    });
+// Event listener for the submit button click event
+document.getElementById("commentForm").addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    // Collect comment data from input fields
+    var commentText = document.getElementById("commentBody").value;
+
+    // Construct the comment object
+    var newComment = {
+
+
+        body: commentText,
+        post_id: document.getElementById("commentForm").getAttribute('data-id')
+    };
+    console.log(newComment);
+    const response = await fetch('/api/comments', {
+        method: 'POST',
+        body: JSON.stringify(newComment),
+        headers: {
+            'Content-Type': 'application/json',
+        },
+
+    })
+    if (response.ok) {
+        document.location.reload();
+    } else {
+        alert('Failed to create post');
+    }
 });
+
 
