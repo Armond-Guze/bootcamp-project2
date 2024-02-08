@@ -3,7 +3,7 @@ document.getElementById("commentForm").addEventListener("submit", async function
     event.preventDefault();
 
     // Collect comment data from input fields
-    var commentText = document.getElementById("commentBody").value;
+    var commentText = document.getElementById("body").value;
 
     // Construct the comment object
     var newComment = {

@@ -2,9 +2,7 @@
   <h2>{{name}}</h2>
   <p>{{description}}</p>
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <button class="btn btn-primary">Comment on this Post!</button>
-  </p>
+ 
 </div>
 
 <!-- Comment form -->
@@ -18,8 +16,8 @@
         <div class="card-body">
           <form id="commentForm" data-id="{{id}}">
             <div class="form-group">
-              <label for="commentBody">Your Comment:</label>
-              <textarea class="form-control" id="commentBody" rows="3" required></textarea>
+              <label for="body">Your Comment:</label>
+              <textarea class="form-control" id="body" rows="3" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary" >Submit</button>
           </form>
