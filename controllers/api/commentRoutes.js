@@ -23,7 +23,7 @@ router.post('/', withAuth, async (req, res) => {
            where:{post_id: req.params.id}
           });
       
-          res.status(200).json(newPost);
+          res.status(200).json(comments);
     } catch (err) {
         res.status(500).json(err);
       }
