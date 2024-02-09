@@ -7,8 +7,6 @@ document.getElementById("commentForm").addEventListener("submit", async function
 
     // Construct the comment object
     var newComment = {
-
-
         body: commentText,
         post_id: document.getElementById("commentForm").getAttribute('data-id')
     };
@@ -27,5 +25,21 @@ document.getElementById("commentForm").addEventListener("submit", async function
         alert('Failed to create post');
     }
 });
+
+const delComment = async (event) => {
+    if (event.target.hasAttribute('data-id')) {
+      const id = event.target.getAttribute('data-id');
+  
+      const response = await fetch(`/api/comments/${id}`, {
+        method: 'DELETE',
+      });
+  
+      if (response.ok) {
+        document.location.replace('/post');
+      } else {
+        alert('Failed to delete comment');
+      }
+    }
+  };
 
 
