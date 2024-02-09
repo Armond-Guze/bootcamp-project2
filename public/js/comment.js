@@ -7,8 +7,6 @@ document.getElementById("commentForm").addEventListener("submit", async function
 
     // Construct the comment object
     var newComment = {
-
-
         body: commentText,
         post_id: document.getElementById("commentForm").getAttribute('data-id')
     };

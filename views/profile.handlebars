@@ -12,7 +12,6 @@
   <input style = "width:500px;height:200px" type = "text" id = "aboutme" placeholder = "Tell us about you">
 </div>
   <!--Interests -->
-  
 <div class = "col-3">
 <br/>
 <br/>
@@ -24,6 +23,7 @@
 <br/>
 <br/>
 <br/>
+
 <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Select Interests
@@ -98,13 +98,13 @@
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenu">
       <a class="dropdown-item" href="#">
-            <input type="radio" id="gen1" class="form-check-input"> Man
+            <input type="radio" id="gen1" style="display: none" class="form-check-input"> Man
         </a>
          <a class="dropdown-item" href="#">
-            <input type="radio" id="gen2" class="form-check-input"> Woman
+            <input type="radio" id="gen2" style="display: none" class="form-check-input"> Woman
         </a>
          <a class="dropdown-item" href="#">
-            <input type="radio" id="gen3" class="form-check-input"> Non-Binary
+            <input type="radio" id="gen3" style="display: none" class="form-check-input"> Non-Binary
         </a>
     </div>
     </div>
@@ -113,21 +113,18 @@
     </div>
   </div>
 <button type = "button" class = "btn btn-primary">Submit</button>
-
 </div>
-
 
 <div class="row mt-4">
   <div class="col-md-6">
     <h3>Create a New Post:</h3>
-
     <form class="form new-post-form">
       <div class="form-group">
         <label for="post-name">post name:</label>
         <input class="form-input" type="text" id="post-name" name="post-name" />
       </div>
       <div class="form-group">
-        <label for="ppst-desc">description:</label>
+        <label for="post-desc">description:</label>
         <textarea class="form-input" id="post-desc" name="post-desc"></textarea>
       </div>
       <div class="form-group">
