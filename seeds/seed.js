@@ -18,10 +18,7 @@ const seedDatabase = async () => {
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
-  // const post = await Post.bulkCreate(postData, {
-  //   individualHooks: true,
-  //   returning: true,
-  // });
+  
   process.exit(0);
 };
 
