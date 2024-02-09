@@ -21,7 +21,6 @@ router.post('/', withAuth, async (req, res) => {
     try {
         const comments = await Comment.findAll({
            where:{post_id: req.params.id}
-            
           });
       
           res.status(200).json(newPost);
