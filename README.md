@@ -24,4 +24,5 @@ WHEN I find someone with the same interests
 THEN I can comment on their post
 ```
 
-Deployed Site: https://github.com/Armond-Guze/bootcamp-project2
+Deployed Site: https://blog-post-server-b0db1b2ef17f.herokuapp.com/
+Github Repo: https://github.com/Armond-Guze/bootcamp-project2
