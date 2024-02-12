@@ -26,7 +26,9 @@ document.getElementById("commentForm").addEventListener("submit", async function
     }
 });
 
-const delComment = async (event) => {
+// const delComment = async (event) => {
+  document.getElementById("delete-button").addEventListener("click", async function(event){
+    console.log("testing")
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
   
@@ -40,6 +42,6 @@ const delComment = async (event) => {
         alert('Failed to delete comment');
       }
     }
-  };
+  });
 
 
