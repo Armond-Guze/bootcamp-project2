@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+    <h2 class="welcome">Welcome, {{name}}!</h2>
   </div>
 </div>
 <!--Profile Section-->
@@ -8,7 +8,7 @@
 <div class = "row">
   <!--About me box -->
 <div class = "col-3">
-  <h3>About me</h3>
+  <h3><strong><ins>About Me:</ins></strong></h3>
   <input style = "width:300px;height:100px" type = "text" id = "aboutme" placeholder = "Tell us about you">
 </div>
   <!--Interests -->
@@ -19,7 +19,7 @@
 <br/>
 <br/>
 <br/>
-
+<br/>
 
 <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -143,14 +143,14 @@ submit_btn.addEventListener('click', function(){
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Create a New Post:</h3>
+    <h3><strong><ins>Write a New Post:</ins></strong></h3>
     <form class="form new-post-form">
       <div class="form-group">
-        <label for="post-name">post name:</label>
+        <label for="post-name"><strong>Post name:</strong></label>
         <input class="form-input" type="text" id="post-name" name="post-name" />
       </div>
       <div class="form-group">
-        <label for="post-desc">description:</label>
+        <label for="post-desc"><strong>Description:</strong></label>
         <textarea class="form-input" id="post-desc" name="post-desc"></textarea>
       </div>
       <div class="form-group">
@@ -161,7 +161,7 @@ submit_btn.addEventListener('click', function(){
 <!--Taking every post and for each post its formatting it and putting on the page-->
   {{#if posts.length}}
   <div class="col-md-6 post-list">
-    <h3>Current Post:</h3>
+    <h3><strong><ins>Current Post:</ins></strong></h3>
     {{#each posts as |post|}}
     <div class="row mb-2">
       <div class="col-md-8">
