@@ -37,7 +37,7 @@ document.getElementById("commentForm").addEventListener("submit", async function
       });
   
       if (response.ok) {
-        document.location.replace('/post');
+        document.location.reload();
       } else {
         alert('Failed to delete comment');
       }
