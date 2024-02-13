@@ -1,6 +1,12 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+header, .post:not(:last-child) {
+  border-bottom: 1px solid #000000;
+  border-style: dashed;
 }
+.post:last-child {
+  border-bottom: 1px solid #000000;
+  border-style: dashed;
+}
+
 
 .no-button {
   background: none;
@@ -28,4 +34,41 @@ header, .project:not(:last-child) {
 .login {
   color: black;
   padding: 10px;
+}
+
+#location {
+  display: flex;
+  margin: 10px;
+  margin-inline: -310px;
+}
+/* Select Interests Button */
+#dropdownMenuButton {
+  display: flex;
+  margin: 10px;
+  margin-inline: -280px;
+  
+}
+/* Select Gender Button */
+#dropdownMenu {
+  display: flex;
+  margin: 10px;
+  margin-inline: -295px;
+}
+
+#age_select {
+  display: flex;
+  margin: 10px;
+  margin-inline: -295px;
+}
+
+#submit_btn {
+  display: flex;
+  margin: 10px;
+  margin-inline: -280px;
+  
+}
+
+.col-3 {
+  margin-top: 30px;
+  
 }
