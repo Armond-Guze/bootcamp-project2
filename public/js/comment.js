@@ -10,7 +10,6 @@ document.getElementById("commentForm").addEventListener("submit", async function
         body: commentText,
         post_id: document.getElementById("commentForm").getAttribute('data-id')
     };
-    console.log(newComment);
     const response = await fetch('/api/comments', {
         method: 'POST',
         body: JSON.stringify(newComment),
@@ -28,7 +27,6 @@ document.getElementById("commentForm").addEventListener("submit", async function
 
 // const delComment = async (event) => {
   document.getElementById("delete-button").addEventListener("click", async function(event){
-    console.log("testing")
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
   
