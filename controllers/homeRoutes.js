@@ -87,9 +87,10 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-module.exports = router;
-
 router.post('/profile_data', (req, res) =>{
 console.log("arrived ",req.body); 
 
 }); 
+
+
+module.exports = router;

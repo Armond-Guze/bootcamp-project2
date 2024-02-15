@@ -114,18 +114,14 @@
 document.addEventListener('DOMContentLoaded', function(){
     var submit_btn = document.getElementById('submit_btn');
     submit_btn.addEventListener('click', function(){
-        alert("Profile Updated!"); 
+         
         // Handle all the cases for the dropdowns
         var interest_checkboxes = document.querySelectorAll('#dropdown_interests input[type="checkbox"]:checked');
-        console.log(interest_checkboxes);
         var gender_radios = document.querySelectorAll('#gender_menu input[type="radio"]:checked');
-        console.log(gender_radios);
 
         // Convert node lists to arrays
-        var interest_array = Array.from(interest_checkboxes).map(checkbox => checkbox.nextElementSibling.textContent);
-        var gender_array = Array.from(gender_radios).map(radio => radio.nextElementSibling ? radio.nextElementSibling.textContent : null);
-        interest_array = string(interest_array);
-        gender_array = string(gender_array); 
+        var interest_array = Array.from(interest_checkboxes).map(checkbox => Array.from(checkbox.parentElement.childNodes)[2].textContent.trim());
+        var gender_array = Array.from(gender_radios).map(radio => Array.from(radio.parentElement.childNodes)[2].textContent.trim());
         // Get other values
         var age = document.getElementById('age_select').value;
         var city = document.getElementById('location').value;
