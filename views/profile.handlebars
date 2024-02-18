@@ -94,15 +94,15 @@
         Select Gender
     </button>
     <div name = "gender_menu" id = "gender_menu" class="dropdown-menu" aria-labelledby="dropdownMenu">
-      <a class="dropdown-item" href="#">
-            <input type="radio" id="gen1" class="form-check-input" name = "radioBTN" checked> Man
-        </a>
-         <a class="dropdown-item" href="#">
+      <label class="dropdown-item" >
+            <input type="radio" id="gen1" class="form-check-input" name = "radioBTN"> Man
+        </label>
+         <label class="dropdown-item">
             <input type="radio" id="gen2" class="form-check-input" name = "radioBTN"> Woman
-        </a>
-         <a class="dropdown-item" href="#">
+        </label>
+         <label class="dropdown-item">
             <input type="radio" id="gen3" class="form-check-input" name = "radioBTN"> Non-Binary
-        </a>
+        </label>
     </div>
     </div>
     <div class = "col-2">
@@ -111,31 +111,51 @@
   </div>
 <button id = "submit_btn" type = "button" class = "btn btn-primary">Submit</button>
 <script>
-var submit_btn = document.getElementById('submit_btn');
-submit_btn.addEventListener('click', function(){
-    // Handle all the cases for the dropdowns
-    var interest_checkboxes = document.querySelectorAll('#dropdown_interests input[type="checkbox"]:checked');
-    var gender_radios = document.querySelectorAll('#gender_menu input[type="radio"]:checked');
+document.addEventListener('DOMContentLoaded', function(){
+    var submit_btn = document.getElementById('submit_btn');
+    submit_btn.addEventListener('click', function(){
+         
+        // Handle all the cases for the dropdowns
+        var interest_checkboxes = document.querySelectorAll('#dropdown_interests input[type="checkbox"]:checked');
+        var gender_radios = document.querySelectorAll('#gender_menu input[type="radio"]:checked');
 
-    // Convert node lists to arrays
-     var interest_array = Array.from(interest_checkboxes).map(checkbox => checkbox.nextElementSibling.textContent.trim());
-    var gender_array = Array.from(gender_radios).map(radio => radio.nextElementSibling.textContent.trim());
-
-    // Get other values
-    var age = document.getElementById('age_select').value;
-    var city = document.getElementById('location').value;
-
-    console.log(interest_array);
-    console.log(gender_array); 
-    console.log(age);
-    console.log(city);
-
-    // TODO: Perform further processing or send a POST request
+        // Convert node lists to arrays
+        var interest_array = Array.from(interest_checkboxes).map(checkbox => Array.from(checkbox.parentElement.childNodes)[2].textContent.trim());
+        var gender_array = Array.from(gender_radios).map(radio => Array.from(radio.parentElement.childNodes)[2].textContent.trim());
+        // Get other values
+        var age = document.getElementById('age_select').value;
+        var city = document.getElementById('location').value;
+        console.log(interest_array);
+        console.log(gender_array); 
+        console.log(age);
+        console.log(city);
+        try {
+            fetch('/profile_data', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    interest: interest_array,
+                    gender: gender_array,
+                    age: age,
+                    city: city
+                })
+            }).then(response => {
+                if(response.ok){
+                    return response.json();
+                }
+                throw new Error('Request Failed');
+            }).then(data => {
+                console.log(data);
+            }).catch(error => {
+                console.log(error);
+            }); 
+        } catch (error) {
+            console.log(error); 
+        }
+    });
 });
-
-
-
-
 
 </script>
 
