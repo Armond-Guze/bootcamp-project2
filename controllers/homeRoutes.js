@@ -87,8 +87,18 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.post('/profile_data', (req, res) =>{
+// Do I need to do this route or not?
+router.post('/profile_data', async (req, res) =>{
 console.log("arrived ",req.body); 
+const userData = await User.findByPk(req.session.user_id, {
+ 
+});
+console.log(userData)
+userData.gender=req.body.gender[0]
+userData.age=req.body.age
+userData.city=req.body.city
+
+userData.save()
 
 }); 
 
