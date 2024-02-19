@@ -2,16 +2,33 @@
   {
     "name": "Sal",
     "email": "sal@hotmail.com",
-    "password": "password12345"
+    "password": "password12345",
+ 
+    "gender": [
+      "Man"
+    ],
+    "age": "27",
+    "city": ""
   },
   {
     "name": "Lernantino",
     "email": "lernantino@gmail.com",
-    "password": "password12345"
+    "password": "password12345",
+
+    "gender": [
+      "Man"
+    ],
+    "age": "20",
+    "city": ""
   },
   {
     "name": "Amiko",
     "email": "amiko2k20@aol.com",
-    "password": "password12345"
+    "password": "password12345",
+    "gender": [
+      "Man"
+    ],
+    "age": "22",
+    "city": ""
   }
 ]

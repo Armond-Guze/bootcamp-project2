@@ -35,6 +35,22 @@ User.init(
         len: [8],
       },
     },
+    // interests: {
+    //   type: DataTypes.ARRAY(DataTypes.STRING),
+    //   allowNull: true,
+    // },
+    gender: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    city: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    age: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
   },
   {
     hooks: {
@@ -56,21 +72,4 @@ User.init(
 );
 
 module.exports = User;
-/*
-interests: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
-      allowNull: true,
-    },
-    gender: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    location: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    age: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-*/
+
