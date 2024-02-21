@@ -22,7 +22,7 @@ WHEN I view the Friend Space feed
 THEN I am able to create a post for others to see
 WHEN I find someone with the same interests
 THEN I can comment on their post
-```
+When I go to my profile I am given the option to add profile details like gender, age and interest.
 
 Deployed Site: https://blog-post-server-b0db1b2ef17f.herokuapp.com/
 Github Repo: https://github.com/Armond-Guze/bootcamp-project2
